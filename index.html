@@ -22,78 +22,175 @@
 <script>
   {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Muhammad Jamil",
-  "alternateName": "Jamilsoft",
-  "url": "https://jamilsoft-bot.github.io/",
-  "email": "mailto:myakububauchi@gmail.com",
-  "description": "Professional software developer focusing on website and mobile development, software development, digital marketing, digital forensics, IT consulting, data analysis, graphic design and more.",
-  "jobTitle": "Software Developer / IT Consultant / Digital Marketer",
-  "knowsAbout": [
-    "Software Development",
-    "Website & Mobile Development",
-    "Graphic Design",
-    "Digital Marketing",
-    "Digital Forensic",
-    "Data Analysis",
-    "SEO",
-    "Web Scraping"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Services by Jamilsoft",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Website Design & Development"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Mobile App Development"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Software Development (Cross-platform)"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Graphic Design (Logos, Banners, Cards, etc.)"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Digital Marketing & SEO"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Data Analysis & Research / Digital Forensic"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "IT Consulting"
-        }
+  "@graph": [
+
+    {
+      "@type": "Person",
+      "@id": "https://jamilsoft-bot.github.io/#person",
+      "name": "Muhammad Jamil",
+      "alternateName": "Jamilsoft",
+      "url": "https://jamilsoft-bot.github.io/",
+      "image": "https://jamilsoft-bot.github.io/assets/img/profile.jpg",
+      "email": "mailto:myakububauchi@gmail.com",
+      "jobTitle": [
+        "Software Developer",
+        "IT Consultant",
+        "Digital Marketer",
+        "Data Analyst"
+      ],
+      "description": "Professional software developer focusing on website & mobile development, software engineering, digital marketing, digital forensics, IT consulting, SEO and data analysis.",
+      "knowsAbout": [
+        "Software Development",
+        "Web Development",
+        "Mobile App Development",
+        "Digital Marketing",
+        "Digital Forensics",
+        "Data Analysis",
+        "SEO",
+        "Web Scraping",
+        "Graphic Design",
+        "Cybersecurity Basics"
+      ],
+      "worksFor": {
+        "@id": "https://jamilsoft-bot.github.io/#organization"
       }
-    ]
-  }
+    },
+
+
+    {
+      "@type": "Organization",
+      "@id": "https://jamilsoft-bot.github.io/#organization",
+      "name": "Jamilsoft Technologies",
+      "url": "https://jamilsoft-bot.github.io/",
+      "logo": "https://jamilsoft-bot.github.io/assets/img/logo.png",
+      "founder": {
+        "@id": "https://jamilsoft-bot.github.io/#person"
+      },
+      "description": "A Nigerian-based digital and software services company offering web development, mobile development, consulting, digital marketing, data analysis and technology training.",
+      "sameAs": [
+        "https://github.com/jamilsoft-bot"
+      ],
+      "makesOffer": [
+        { "@id": "https://jamilsoft-bot.github.io/#service1" },
+        { "@id": "https://jamilsoft-bot.github.io/#service2" },
+        { "@id": "https://jamilsoft-bot.github.io/#service3" },
+        { "@id": "https://jamilsoft-bot.github.io/#service4" },
+        { "@id": "https://jamilsoft-bot.github.io/#service5" },
+        { "@id": "https://jamilsoft-bot.github.io/#service6" }
+      ]
+    },
+
+
+    {
+      "@type": "WebSite",
+      "@id": "https://jamilsoft-bot.github.io/#website",
+      "url": "https://jamilsoft-bot.github.io/",
+      "name": "Jamilsoft – Software & Digital Services",
+      "publisher": {
+        "@id": "https://jamilsoft-bot.github.io/#organization"
+      },
+      "inLanguage": "en",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://jamilsoft-bot.github.io/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+
+
+    {
+      "@type": "WebPage",
+      "@id": "https://jamilsoft-bot.github.io/#homepage",
+      "url": "https://jamilsoft-bot.github.io/",
+      "name": "Home – Jamilsoft Technologies",
+      "isPartOf": {
+        "@id": "https://jamilsoft-bot.github.io/#website"
+      },
+      "about": {
+        "@id": "https://jamilsoft-bot.github.io/#person"
+      },
+      "description": "Jamilsoft Technologies official website offering professional software solutions, digital marketing, design and IT consulting services.",
+      "breadcrumb": {
+        "@id": "https://jamilsoft-bot.github.io/#breadcrumb"
+      }
+    },
+
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://jamilsoft-bot.github.io/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jamilsoft-bot.github.io/"
+        }
+      ]
+    },
+
+
+    {
+      "@type": "Service",
+      "@id": "https://jamilsoft-bot.github.io/#service1",
+      "name": "Website Design & Development",
+      "provider": {
+        "@id": "https://jamilsoft-bot.github.io/#organization"
+      },
+      "description": "Design and development of responsive business and personal websites."
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://jamilsoft-bot.github.io/#service2",
+      "name": "Mobile App Development",
+      "provider": {
+        "@id": "https://jamilsoft-bot.github.io/#organization"
+      },
+      "description": "Creating modern Android and mobile applications using the latest technologies."
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://jamilsoft-bot.github.io/#service3",
+      "name": "Custom Software Development",
+      "provider": {
+        "@id": "https://jamilsoft-bot.github.io/#organization"
+      },
+      "description": "Cross-platform software development for businesses and individuals."
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://jamilsoft-bot.github.io/#service4",
+      "name": "Graphic Design",
+      "provider": {
+        "@id": "https://jamilsoft-bot.github.io/#organization"
+      },
+      "description": "Professional design for logos, banners, flyers, cards, and branding materials."
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://jamilsoft-bot.github.io/#service5",
+      "name": "Digital Marketing & SEO",
+      "provider": {
+        "@id": "https://jamilsoft-bot.github.io/#organization"
+      },
+      "description": "SEO optimization and online marketing for businesses and brands."
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://jamilsoft-bot.github.io/#service6",
+      "name": "Data Analysis & Digital Forensics",
+      "provider": {
+        "@id": "https://jamilsoft-bot.github.io/#organization"
+      },
+      "description": "Data analysis, research work and basic digital forensic services."
+    }
+
+  ]
 }
 
 </script>
